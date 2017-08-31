@@ -4,4 +4,4 @@ Creation-Date: 2017-08-18T13:15:43-04:00
 
 ====== Pooling ======
 Created Friday 18 August 2017
-
+Spatial pooling seeks to reduce the dimensionality of the feature map while retaining important information. To do so, the feature map is filetered with a smaller matrix. This matrix is imposed on a part of the feature map, and the data within is operated on in some way. For example, if the pooling filter is 2x2 and is a Max filter, the maximum value in the 2x2 area of the feature map it is extracted and put in a new, smaller feature map.

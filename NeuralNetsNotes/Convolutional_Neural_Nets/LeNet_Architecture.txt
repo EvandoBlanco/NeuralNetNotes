@@ -6,7 +6,7 @@ Creation-Date: 2017-08-18T13:04:38-04:00
 Created Friday 18 August 2017
 
 **Summary**
-LeNet architecture was one of the first successful [[:Convolutional Neural Nets|convolutional neural networks]], and was developed in the early 1990's. It was used mostly for character recognition. 
+LeNet architecture was one of the first successful [[:Convolutional Neural Nets|convolutional neural networks (CNN's]]), and was developed in the early 1990's. It was used mostly for character recognition and is a basic structure for CNN's. 
 
 [[:Convolutional Neural Nets:CNN Operations|Operations]]** Overview**
 LeNet architecture has 4 main operations:
@@ -22,7 +22,7 @@ LeNet architecture has 4 main operations:
 	Because most real-world data is non-linear in nature, LeNet architecture applies a non-linear function to feature maps output by the convolution operation. Generally, it is the Rectified Linear Unit function which is applied per pixel. This function simply changes any negative values to 0. tanh and sigmoid can also be used. 
 
 3. [[:Convolutional Neural Nets:CNN Operations:Pooling|Pooling]]
-	Spatial pooling seeks to reduce the dimensionality of the feature map while retaining important information. To do so, the feature map is filetered with a smaller matrix. This matrix is imposed on a part of the feature map, and the data within is operated on in some way. For example, if the pooling filter is 2x2 and is a Max filter, the maximum value in the 2x2 area of the featurre map it is extracted and put in a new, smaller feature map.
+	Spatial pooling seeks to reduce the dimensionality of the feature map while retaining important information. To do so, the feature map is filetered with a smaller matrix. This matrix is imposed on a part of the feature map, and the data within is operated on in some way. For example, if the pooling filter is 2x2 and is a Max filter, the maximum value in the 2x2 area of the feature map it is extracted and put in a new, smaller feature map.
 	{{./screen-shot-2016-08-10-at-3-38-39-am.png}}
 	
 	The purpose of pooling is to reduce the size of the feature map. This makes the data set more managable, as well as reducing overfitting to sample data. It also makes the network more resistent to small changes in input, i.e., an image with a small difference is unlikely to significantly affect the network.

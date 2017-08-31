@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-08-31T14:59:14-04:00
+
+====== Neural Style ======
+Created Thursday 31 August 2017
+
+**Overview**
+Neural style uses a convolutional neural network (CNN) to marry the style of one image with the content of another. This is done to a user-adjustable degree, i.e. the user chooses the amount of "style" to be applied. In general, the style and content are inversely related: the more of of one image's style applied to another, the more of the latter's content is lost.
+{{~\Pictures\PaperImages.png?width=446}}
+
+
+**Obtaining Image Content**
+Image content is distillied in the traditional manner of object recognition (see [[:Convolutional Neural Nets:LeNet Architecture|LeNet Architecture]]). At each layer of the network, filters are applied to the input, creating feature maps that represent the //content// of the input, rather than actual pixel values. Futher in the network, reconstruction of the input image can only be done up to the generalized content.
+
+**Obtaining Image Style**
+The style of an input is captured via a feature space created from the correlation between spatial differences in the filter maps at every layer in the network. This process results in a static representation of the input image that captures texture, but not the position of content. In terms of reconstructed style images result in more localized styles being represented as we get deeper into the network. In the image blow, the first style reconstruction represents the texture of the input most closely, while the latter ones represent texture structures of the overall image better.
+{{~\Pictures\main-qimg-db6be590ed7a0b41348d8f52ca4fb40d.png}}
+
+Applying the style to the input image can be done using output from different layers of the neural net. However, generally speaking using feature maps from the higher layers of the network will produces the smoothest features in the output. Looking at the reconstructions above, the further in the net the style is reconstructed the more distinct the style gets.
+
+**Methods**
+The networks structure used int he paper is based on the VGG-network developed at Oxford. It did not include the use of any fully-connected (multi-peceptron) layers. Average [[:Convolutional Neural Nets:CNN Operations:Pooling|pooling]] was used, instead of max pooling, and produced the best results. 
+
+Here is a MS paint drawing of how the image is filtered at each layer:
+{{~\Pictures\Explination.png?width=500}}
+
+
+
+
+ 
+

@@ -7,3 +7,15 @@ Created Wednesday 23 August 2017
 
 http://cs231n.github.io/convolutional-networks/
 http://andrew.gibiansky.com/blog/machine-learning/convolutional-neural-networks/
+
+**Neural Style**
+https://arxiv.org/pdf/1508.06576.pdf
+Texture
+https://arxiv.org/abs/1505.07376
+
+VGG network
+https://arxiv.org/pdf/1409.1556.pdf
+
+Caffe
+http://ucb-icsi-vision-group.github.io/caffe-paper/caffe.pdf
+
