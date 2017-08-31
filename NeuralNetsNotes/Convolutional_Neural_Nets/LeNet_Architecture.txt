@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-08-18T13:04:38-04:00
+
+====== LeNet Architecture ======
+Created Friday 18 August 2017
+
+**Summary**
+LeNet architecture was one of the first successful [[:Convolutional Neural Nets|convolutional neural networks]], and was developed in the early 1990's. It was used mostly for character recognition. 
+
+[[:Convolutional Neural Nets:CNN Operations|Operations]]** Overview**
+LeNet architecture has 4 main operations:
+
+1. [[:Convolutional Neural Nets:CNN Operations:Convolution|Convolution]]
+	CNN's derive their name from the convolution operator. It's primary purpose in a CNN is to extract features from an input image. It results in a feature map that stores given features based on predetermined "filters". 
+	The size of the feature map is determened by:
+	**Depth**, or the number of filters used for a convolution operation.
+	**Stride**, or the number of pixels that the filter moves in each iteration. A larger stride produces a smaller feature map.
+	**Zero Padding**, or adding zeroes at the border of the input. This allows us to apply the filter to bordering elements, and to control the size of the feature map.
+	
+2. [[:Convolutional Neural Nets:CNN Operations:Non-Linearity|Non-Linearity]]
+	Because most real-world data is non-linear in nature, LeNet architecture applies a non-linear function to feature maps output by the convolution operation. Generally, it is the Rectified Linear Unit function which is applied per pixel. This function simply changes any negative values to 0. tanh and sigmoid can also be used. 
+
+3. [[:Convolutional Neural Nets:CNN Operations:Pooling|Pooling]]
+	Spatial pooling seeks to reduce the dimensionality of the feature map while retaining important information. To do so, the feature map is filetered with a smaller matrix. This matrix is imposed on a part of the feature map, and the data within is operated on in some way. For example, if the pooling filter is 2x2 and is a Max filter, the maximum value in the 2x2 area of the featurre map it is extracted and put in a new, smaller feature map.
+	{{./screen-shot-2016-08-10-at-3-38-39-am.png}}
+	
+	The purpose of pooling is to reduce the size of the feature map. This makes the data set more managable, as well as reducing overfitting to sample data. It also makes the network more resistent to small changes in input, i.e., an image with a small difference is unlikely to significantly affect the network.
+
+4. [[:Convolutional Neural Nets:CNN Operations:Classification|Classification]]
+	Classification is the last step in the CNN. After the input's high level features have been defined by the three previous operations and passed through the fully-connected layer, that output is classified. Softmax is often used as  the classification function. It simply takes a set of real-number vectors and squashes them into values that add up to 1.
+
+**The Fully-Connected Layer**
+The fully-connected layer of a CNN uses the output of the convolution, non-linearity, and pooling operations as inputs into a multi-layer perceptron. The classification operation is used in the output layer of the perceptron.
+
+

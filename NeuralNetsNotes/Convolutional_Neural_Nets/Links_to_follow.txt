@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-08-23T20:06:42-04:00
+
+====== Links to follow ======
+Created Wednesday 23 August 2017
+
+http://cs231n.github.io/convolutional-networks/
+http://andrew.gibiansky.com/blog/machine-learning/convolutional-neural-networks/
